@@ -9,6 +9,17 @@ package hello.world.app;
  *
  * @author Jagmeet
  */
+//non public class(Test)
+//it can start with lower case
+class test{
+   
+    public void puppyAge(){
+        //variable initialiaztion required for local variable(age)
+        int age=0;
+        age=age+5;
+        System.out.println("puppy age is: "+ age);
+    }
+}
 public class Puppy {
     int puppyAge;
     
@@ -33,6 +44,13 @@ public class Puppy {
         
         //accessing instance variable
         System.out.println("my dog's age is : "+myPuppy.puppyAge);
+        
+        //for 2nd class
+        System.out.println("\n 2nd dog's age: ");
+        //creating an instance of test class
+        test pup2=new test();
+        //calling the member function of test class
+        pup2.puppyAge(); 
         
         
     }
