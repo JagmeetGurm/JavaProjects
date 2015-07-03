@@ -10,7 +10,22 @@ package hello.world.app;
  * @author Jagmeet
  */
 import java.io.*;
-
+class employ{
+    //this public varible will also be accessible to subclasses.
+    public String name;
+    //this variable will only be available to class methods.
+    private double salary;
+    public employ(String name){
+        this.name=name;
+    }
+    public void setSalary(double empSal){
+        salary=empSal;
+    }
+    public void printEmp(){
+        System.out.println("name: "+ name);
+        System.out.println("salary: "+salary);
+    }
+}
 public class Employee {
     String name;
     int age;
@@ -37,4 +52,11 @@ public class Employee {
         System.out.println("salary: "+salary);
         System.out.println("des: "+designation);
     }
+
+public static void main(String args[]){
+employ emp1=new employ("Jag");
+emp1.setSalary(1000);
+emp1.printEmp();
+
+}
 }
