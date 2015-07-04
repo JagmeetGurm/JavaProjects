@@ -67,6 +67,28 @@ System.out.println(result);
 result=car1 instanceof Vehicle;
 //should return true;
 System.out.println(result);
+
+//while loop
+int x=20;
+//to print x from 20 t0 30(inlcuding 30)
+while(x<=30){
+    System.out.println("value of x: "+x +"\n");
+    x++;
+    
+}
+
+//do while loop
+int y=20;
+//even though the while condition is false, it still gets executed atleast ones because condition is checked later
+do{
+    System.out.println("value of y: "+y);
+    y++;
+}while(y<20);
+
+//the For loop
+for(int i=0; i<10; i++){
+    System.out.println(i);
+}
 }
 }
 //non-public class 
