@@ -10,12 +10,12 @@ package hello.world.app;
  * @author Jagmeet
  */
 import java.io.*;
-class employ{
+class Employ{
     //this public varible will also be accessible to subclasses.
     public String name;
     //this variable will only be available to class methods.
     private double salary;
-    public employ(String name){
+    public Employ(String name){
         this.name=name;
     }
     public void setSalary(double empSal){
@@ -54,18 +54,34 @@ public class Employee {
     }
 
 public static void main(String args[]){
-employ emp1=new employ("Jag");
+Employ emp1=new Employ("Jag");
 emp1.setSalary(1000);
 emp1.printEmp();
-test2 ternaryTest=new test2(30);
+Test2 ternaryTest=new Test2(30);
+
+
+Vehicle car1=new Car();
+boolean result=car1 instanceof Car;
+//should return true;
+System.out.println(result);
+result=car1 instanceof Vehicle;
+//should return true;
+System.out.println(result);
 }
 }
 //non-public class 
-class test2{
+class Test2{
     private int a=10;
-    public test2(int num){
+    public Test2(int num){
         int b=(a==num)? 5: 20;
         System.out.println("b is: " +b);
         
     }
 }
+//Abstract class(non-public)
+class Vehicle{
+}
+
+//Derived Class(non-public)
+class Car extends Vehicle{
+}   
