@@ -57,6 +57,15 @@ public static void main(String args[]){
 employ emp1=new employ("Jag");
 emp1.setSalary(1000);
 emp1.printEmp();
-
+test2 ternaryTest=new test2(30);
 }
+}
+//non-public class 
+class test2{
+    private int a=10;
+    public test2(int num){
+        int b=(a==num)? 5: 20;
+        System.out.println("b is: " +b);
+        
+    }
 }
