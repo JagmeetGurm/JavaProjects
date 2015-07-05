@@ -89,6 +89,13 @@ do{
 for(int i=0; i<10; i++){
     System.out.println(i);
 }
+
+//Enhanced loops: used mainly for arrays
+int [] numbers={10,20,30,40};
+for (int a: numbers){
+    System.out.print(a);
+    System.out.print(", ");
+}
 }
 }
 //non-public class 
