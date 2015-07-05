@@ -119,6 +119,15 @@ System.out.print("\n");
 System.out.print(x+", ");
 
 }
+
+//if..else 
+int num2=20;
+if(num2<20)
+    System.out.println("value of num2< 20");
+else if(num2>15)
+    System.out.println("value of num2>15");
+else if(num2==20)
+    System.out.println("value of num2 is 20");
 }
 }
 //non-public class 
