@@ -93,8 +93,31 @@ for(int i=0; i<10; i++){
 //Enhanced loops: used mainly for arrays
 int [] numbers={10,20,30,40};
 for (int a: numbers){
+    //using of print instead of println
+    //print prints the output in same line
     System.out.print(a);
     System.out.print(", ");
+    System.out.println("");
+}
+
+//break keyword
+//break is used to exit the loop when the condition is met
+for( x=0; x<5; x++)
+{if(x==3)
+    break;
+
+System.out.print(x+", ");
+    }
+
+//continue keyword
+//continue causes the loop to jump to the next iteration
+for(x=10; x<15; x++)
+{  if(x==13)
+        continue;
+//13 wouldn't get printed
+System.out.print("\n");
+System.out.print(x+", ");
+
 }
 }
 }
