@@ -128,6 +128,24 @@ else if(num2>15)
     System.out.println("value of num2>15");
 else if(num2==20)
     System.out.println("value of num2 is 20");
+
+
+//the switch statement
+//break to exist the switch block when condition is met
+char grade='B';
+switch(grade){
+    case 'A':
+System.out.println("Excellent!");
+        break;
+    case 'B':
+System.out.println("Great");
+        break;
+    case 'C':
+System.out.println("Good");
+        break;
+    default:
+System.out.println("Try again");
+}
 }
 }
 //non-public class 
