@@ -11,6 +11,8 @@ package hello.world.app;
  */
 import java.io.*;
 import java.util.Date;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 class Employ{
     //this public varible will also be accessible to subclasses.
     public String name;
@@ -207,6 +209,13 @@ for(int i=0;i<returnedArray.length; i++)
 //Getting the current date and time
 Date date1=new Date();
 System.out.println(date1.toString());
+String reg="dog";
+String input="The dog says meow. All dogs says meow.";
+String replace="cat";
+Pattern p=Pattern.compile(reg);
+Matcher m=p.matcher(input);
+input=m.replaceAll(replace);
+System.out.println(input);
 }
 
 }
