@@ -168,7 +168,24 @@ System.out.println("1st string: "+ myString); //
 System.out.println("2nd string: "+ helloString);//prints hello also
 
 //calculating the length of the string
-System.out.println("length of myString: "+myString.length());
+System.out.println("length of myString: "+myString.length());//includes white space as well
+
+
+//Declaring Arrays
+// 1st method
+ int array1[] = new int[10]; //
+ //2nd method : the preferred way of declaring(using reference)
+int[] array2=new int[10];
+int[] array3; //3rd method
+//the preferred way of declaring(direct assignment)
+int array4[]={10,20,30};//4th method 
+
+//accessing elements of array
+for(int i=0;i<array4.length; i++){
+    System.out.println("value of array element "+ i+":"+array4[i]);
+}
+
+
 
 
 
