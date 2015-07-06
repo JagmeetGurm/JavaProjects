@@ -154,7 +154,22 @@ System.out.println("Try again");
 Integer var=5;//boxes int to an Integer object
 var=var+20; //unboxes the Integer to an int
 System.out.println(var);
-System.out.print("jim");
+
+
+//strings are objects in Java
+
+//simple way to create a string(object)
+String myString="hello guys!";
+//Another way of creating Strings
+char []charArray={'h', 'e', 'l', 'l', 'o'};
+System.out.println(charArray); //prints hello
+String helloString=new String(charArray);
+System.out.println("1st string: "+ myString); //
+System.out.println("2nd string: "+ helloString);//prints hello also
+
+//calculating the length of the string
+System.out.println("length of myString: "+myString.length());
+
 
 
 }
