@@ -146,7 +146,19 @@ System.out.println("Good");
     default:
 System.out.println("Try again");
 }
+
+//using wrapping classes
+//when we use primitive data types as objects
+//Boxing and unboxing
+
+Integer var=5;//boxes int to an Integer object
+var=var+20; //unboxes the Integer to an int
+System.out.println(var);
+System.out.print("jim");
+
+
 }
+
 }
 //non-public class 
 class Test2{
