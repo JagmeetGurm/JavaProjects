@@ -10,6 +10,7 @@ package hello.world.app;
  * @author Jagmeet
  */
 import java.io.*;
+import java.util.Date;
 class Employ{
     //this public varible will also be accessible to subclasses.
     public String name;
@@ -202,6 +203,10 @@ int[] returnedArray=myEmployee.printArray(array4); //array4 an array has been pa
 
 for(int i=0;i<returnedArray.length; i++)
     System.out.println(returnedArray[i]);
+
+//Getting the current date and time
+Date date1=new Date();
+System.out.println(date1.toString());
 }
 
 }
