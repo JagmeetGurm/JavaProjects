@@ -52,6 +52,10 @@ public class Employee {
         System.out.println("salary: "+salary);
         System.out.println("des: "+designation);
     }
+    public void printArray(int[] array){
+    for(int i=0; i<array.length; i++)
+    System.out.println("array["+i+"]: "+array[i]);
+    }
 
 public static void main(String args[]){
 Employ emp1=new Employ("Jag");
@@ -186,10 +190,11 @@ for(int i=0;i<array4.length; i++){
 }
 //enhanced loop ; used in arrays to traverse them
 for(int element: array4){
-    System.out.println(array4[element]);
+    System.out.println(element);//traverse entire array without using an indexS
 }
 
-
+Employee myEmployee=new Employee("jim");
+myEmployee.printArray(array4);
 
 
 }
