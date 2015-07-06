@@ -52,9 +52,13 @@ public class Employee {
         System.out.println("salary: "+salary);
         System.out.println("des: "+designation);
     }
-    public void printArray(int[] array){
-    for(int i=0; i<array.length; i++)
+    public int[] printArray(int[] array){
+        int[] result=new int[array.length];
+    for(int i=0; i<array.length; i++){
     System.out.println("array["+i+"]: "+array[i]);
+    result[i]=array[i];
+    }
+    return result;
     }
 
 public static void main(String args[]){
@@ -193,10 +197,11 @@ for(int element: array4){
     System.out.println(element);//traverse entire array without using an indexS
 }
 
-Employee myEmployee=new Employee("jim");
-myEmployee.printArray(array4);
+Employee myEmployee=new Employee("jim"); //new object of Employee type created
+int[] returnedArray=myEmployee.printArray(array4); //array4 an array has been passed
 
-
+for(int i=0;i<returnedArray.length; i++)
+    System.out.println(returnedArray[i]);
 }
 
 }
