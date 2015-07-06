@@ -184,7 +184,10 @@ int array4[]={10,20,30};//4th method
 for(int i=0;i<array4.length; i++){
     System.out.println("value of array element "+ i+":"+array4[i]);
 }
-
+//enhanced loop ; used in arrays to traverse them
+for(int element: array4){
+    System.out.println(array4[element]);
+}
 
 
 
