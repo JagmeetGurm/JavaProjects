@@ -34,10 +34,11 @@ public class Employee {
     int age;
     double salary;
     String designation;
+    int xClass;
     
     public Employee(String name){
         this.name=name;
-        
+        xClass=10;
     }
     public void empAge(int ag){
         age=ag;
@@ -66,6 +67,8 @@ public class Employee {
 
 public static void main(String args[]){
 Employ emp1=new Employ("Jag");
+Employee emp2=new Employee("Jim");
+
 emp1.setSalary(1000);
 emp1.printEmp();
 Test2 ternaryTest=new Test2(30);
@@ -219,6 +222,8 @@ System.out.println(input);
 for (int i=0; i<args.length; i++){
     System.out.println("args["+i+"]: " +args[i]);
 }
+MyClass myClass=new MyClass(20);
+System.out.println(myClass.x);
 }
 
 }
@@ -238,3 +243,8 @@ class Vehicle{
 //Derived Class(non-public)
 class Car extends Vehicle{
 }   
+class MyClass{
+    int x;
+    MyClass(int i){
+            x=i;}
+}
