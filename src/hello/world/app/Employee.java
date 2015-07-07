@@ -216,6 +216,9 @@ Pattern p=Pattern.compile(reg);
 Matcher m=p.matcher(input);
 input=m.replaceAll(replace);
 System.out.println(input);
+for (int i=0; i<args.length; i++){
+    System.out.println("args["+i+"]: " +args[i]);
+}
 }
 
 }
