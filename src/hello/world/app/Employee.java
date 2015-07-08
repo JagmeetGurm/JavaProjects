@@ -64,6 +64,11 @@ public class Employee {
     }
     return result;
     }
+    public void passByValue(int a, int b){
+        int c=a;
+        a=b;
+        b=c;
+    }
 
 public static void main(String args[]){
 Employ emp1=new Employ("Jag");
@@ -222,8 +227,15 @@ System.out.println(input);
 for (int i=0; i<args.length; i++){
     System.out.println("args["+i+"]: " +args[i]);
 }
+//creating the instance of class 
 MyClass myClass=new MyClass(20);
-System.out.println(myClass.x);
+System.out.println(myClass.x); //accesssing the variable directly.
+
+//callling pass by value
+int a3=5, b3=4;
+emp2.passByValue(a3,b3);
+System.out.println("value of a3: "+a3);
+System.out.println("value of b3: "+b3);
 }
 
 }
