@@ -79,7 +79,7 @@ public class Employee {
         }
         System.out.println("max value is "+ result);
     }
-public void readFile() throws IOException
+public void readFile(String fileName) throws IOException
     {
       FileInputStream in = null;
       FileOutputStream out = null;
@@ -272,7 +272,7 @@ System.out.println("value of b3: "+b3);
 
 emp2.printMax(2, 4, 5 ,12, 10);
 emp2.printMax(4,5,1);
-emp2.readFile();
+emp2.readFile("jim.txt");
 
 }
 
