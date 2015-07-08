@@ -69,6 +69,16 @@ public class Employee {
         a=b;
         b=c;
     }
+    public void printMax(int... numbers){
+        if(numbers.length==0)
+            System.out.println("no arguments passed");
+        int result=numbers[0];
+        for(int i=1;i<numbers.length; i++)
+        {  if(numbers[i]>result)
+                result=numbers[i];
+        }
+        System.out.println("max value is "+ result);
+    }
 
 public static void main(String args[]){
 Employ emp1=new Employ("Jag");
@@ -236,6 +246,12 @@ int a3=5, b3=4;
 emp2.passByValue(a3,b3);
 System.out.println("value of a3: "+a3);
 System.out.println("value of b3: "+b3);
+
+//variable no. of arguments
+
+emp2.printMax(2, 4, 5 ,12, 10);
+emp2.printMax(4,5,1);
+
 }
 
 }
