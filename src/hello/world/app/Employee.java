@@ -79,7 +79,28 @@ public class Employee {
         }
         System.out.println("max value is "+ result);
     }
+public void readFile() throws IOException
+    {
+      FileInputStream in = null;
+      FileOutputStream out = null;
 
+      try {
+         in = new FileInputStream("input.txt");
+         out = new FileOutputStream("output.txt");
+         
+         int c;
+         while ((c = in.read()) != -1) {
+            out.write(c);
+         }
+      }finally {
+         if (in != null) {
+            in.close();
+         }
+         if (out != null) {
+            out.close();
+         }
+      }
+   }
 public static void main(String args[]){
 Employ emp1=new Employ("Jag");
 Employee emp2=new Employee("Jim");
@@ -251,6 +272,7 @@ System.out.println("value of b3: "+b3);
 
 emp2.printMax(2, 4, 5 ,12, 10);
 emp2.printMax(4,5,1);
+emp2.readFile();
 
 }
 
