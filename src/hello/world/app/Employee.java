@@ -8,6 +8,7 @@ import java.io.*;
 import java.util.Date;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.io.File;
 class Employ{
     //this public varible will also be accessible to subclasses.
     public String name;
@@ -319,7 +320,7 @@ FileReader in2 = null;
       }
       
       
-      //Standard input
+      //Standard inputj
       InputStreamReader cin = null;
 
       try {
@@ -335,7 +336,15 @@ FileReader in2 = null;
             cin.close();
          }
       }
+     
       
+      
+      //making a new directory
+      
+       String dirname = "\\tmp\\user\\java\\bin";
+      File d = new File(dirname);
+      // Create directory now.
+      d.mkdirs();
 }
 
 }
