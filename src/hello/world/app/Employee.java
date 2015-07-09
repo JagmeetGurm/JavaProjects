@@ -341,7 +341,7 @@ FileReader in2 = null;
       
       //making a new directory
       
-       String dirname = "\\tmp\\user\\java\\bin";
+       String dirname = "C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\Hello World App\\src\\hello\\world\\app\\tmp\\user\\java\\bin";
       File d = new File(dirname);
       // Create directory now.
       d.mkdirs();
@@ -367,6 +367,20 @@ FileReader in2 = null;
          // if any error occurs
          e.printStackTrace();
       }
+      
+      
+      //I/O Exception
+      //Exception handling
+      try{
+          int[] a=new int[2];
+          System.out.println("Access element three: "+ a[3]);
+      }
+      catch(ArrayIndexOutOfBoundsException e){
+          System.out.println("Exception thrown: "+ e);
+          
+          
+      }
+      System.out.println("out of block");
 }
 
 }
