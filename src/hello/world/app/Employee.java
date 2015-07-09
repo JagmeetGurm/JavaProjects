@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hello.world.app;
 
 /**
@@ -79,7 +74,7 @@ public class Employee {
         }
         System.out.println("max value is "+ result);
     }
-public void readFile(String fileName) throws IOException
+/*public void readFile(String fileName) throws IOException
     {
       FileInputStream in = null;
       FileOutputStream out = null;
@@ -101,7 +96,8 @@ public void readFile(String fileName) throws IOException
          }
       }
    }
-public static void main(String args[]){
+    */
+public static void main(String args[])throws IOException {
 Employ emp1=new Employ("Jag");
 Employee emp2=new Employee("Jim");
 
@@ -272,11 +268,32 @@ System.out.println("value of b3: "+b3);
 
 emp2.printMax(2, 4, 5 ,12, 10);
 emp2.printMax(4,5,1);
-emp2.readFile("jim.txt");
+//emp2.readFile("jim.txt");
+
+FileInputStream in = null;
+      FileOutputStream out = null;
+
+      try {
+         in = new FileInputStream("C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\Hello World App\\src\\hello\\world\\app\\input.txt");
+         out = new FileOutputStream("C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\Hello World App\\src\\hello\\world\\app\\output.txt");
+         
+         int c;
+         while ((c = in.read()) != -1) {
+            out.write(c);
+         }
+      }finally {
+         if (in != null) {
+            in.close();
+         }
+         if (out != null) {
+            out.close();
+         }
+      }
+   }
 
 }
 
-}
+
 //non-public class 
 class Test2{
     private int a=10;
