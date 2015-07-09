@@ -371,16 +371,23 @@ FileReader in2 = null;
       
       //I/O Exception
       //Exception handling
+      
+       int[] a=new int[2];
       try{
-          int[] a=new int[2];
+         
           System.out.println("Access element three: "+ a[3]);
-      }
-      catch(ArrayIndexOutOfBoundsException e){
+      }catch(ArrayIndexOutOfBoundsException e){
           System.out.println("Exception thrown: "+ e);
           
           
       }
-      System.out.println("out of block");
+     // System.out.println("out of block");
+      //this is always execute 
+      finally{
+         a[0] = 6;
+         System.out.println("First element value: " +a[0]);
+         System.out.println("The finally statement is executed");
+      }
 }
 
 }
