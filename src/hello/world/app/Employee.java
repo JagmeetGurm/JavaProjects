@@ -279,6 +279,7 @@ FileInputStream in = null;
          
          int c;
          while ((c = in.read()) != -1) {
+           //  System.out.println(c);
             out.write(c);
          }
       }finally {
@@ -289,11 +290,37 @@ FileInputStream in = null;
             out.close();
          }
       }
-   }
+   
 
+
+
+
+
+//character streaming using FileReader
+
+FileReader in2 = null;
+      FileWriter out2 = null;
+
+      try {
+         in2 = new FileReader("C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\Hello World App\\src\\hello\\world\\app\\input.txt");
+         out2 = new FileWriter("C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\Hello World App\\src\\hello\\world\\app\\output.txt");
+         
+         int c;
+         while ((c = in2.read()) != -1) {
+            out2.write(c);
+         }
+      }finally {
+         if (in2 != null) {
+            in2.close();
+         }
+         if (out2 != null) {
+            out2.close();
+         }
+      }
+      
 }
 
-
+}
 //non-public class 
 class Test2{
     private int a=10;
