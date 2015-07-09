@@ -296,7 +296,7 @@ FileInputStream in = null;
 
 
 
-//character streaming using FileReader
+//character streaming using FileReader, FileWriter
 
 FileReader in2 = null;
       FileWriter out2 = null;
@@ -318,9 +318,30 @@ FileReader in2 = null;
          }
       }
       
+      
+      //Standard input
+      InputStreamReader cin = null;
+
+      try {
+         cin = new InputStreamReader(System.in);
+         System.out.println("Enter characters, 'q' to quit.");
+         char c;
+         do {
+            c = (char) cin.read();
+            System.out.print(c);
+         } while(c != 'q');
+      }finally {
+         if (cin != null) {
+            cin.close();
+         }
+      }
+      
 }
 
 }
+
+
+
 //non-public class 
 class Test2{
     private int a=10;
