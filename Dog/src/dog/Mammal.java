@@ -13,5 +13,8 @@ package dog;
      public void blood(){
          System.out.println("Mammals are hot-blodded animals");
      }
+     public void birth(){
+         System.out.println("Mammmals give birth to babies");
+     }
     
 }

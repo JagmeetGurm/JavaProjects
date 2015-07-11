@@ -19,7 +19,8 @@ public class Dog{
     public static void main(String[] args) {
         // TODO code application logic here
         Animal a=new Animal(); //Animal reference and object
-        Animal b=new Mammal();  //Animal reference but Mammal object.
+        Mammal b=new Mammal();  //Animal reference but Mammal object.
+        //^^If this is changed to Animal type, it wont be able to call the birth method because b's reference type Animal doesn't have bark method.
        // Dog d=new Dog();
      /*   System.out.println(a instanceof Animal);
         System.out.println(b instanceof Mammal);
@@ -27,6 +28,7 @@ public class Dog{
        */
         a.blood();//runs the method in Animal class
         b.blood(); //runs the method in Mammal class
+        b.birth();
         
       
     }
