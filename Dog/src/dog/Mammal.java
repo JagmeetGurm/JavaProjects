@@ -11,6 +11,7 @@ package dog;
  */
  class Mammal extends Animal{
      public void blood(){
+         super.blood();
          System.out.println("Mammals are hot-blodded animals");
      }
      public void birth(){
