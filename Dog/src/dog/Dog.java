@@ -9,6 +9,8 @@ package dog;
  *
  * @author Jagmeet
  */
+ interface Vegeterian{}
+class Deer extends Animal implements Vegeterian{}
 public class Dog{
 
     /**
@@ -29,6 +31,13 @@ public class Dog{
         a.blood();//runs the method in Animal class
         b.blood(); //runs the method in Mammal class
         b.birth();
+        Deer d=new Deer();
+        Animal a1=d;// all refer to same d(Deer)
+       Vegeterian m=d;
+        
+       Object o=d;
+       System.out.println(d instanceof Animal);
+        
         
       
     }
