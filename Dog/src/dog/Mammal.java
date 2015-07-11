@@ -9,6 +9,9 @@ package dog;
  *
  * @author Jagmeet
  */
- class Mammal implements Animal{
+ class Mammal extends Animal{
+     public void blood(){
+         System.out.println("Mammals are hot-blodded animals");
+     }
     
 }

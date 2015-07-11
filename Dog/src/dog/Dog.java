@@ -9,7 +9,7 @@ package dog;
  *
  * @author Jagmeet
  */
-public class Dog extends Mammal{
+public class Dog{
 
     /**
      * @param args the command line arguments
@@ -18,13 +18,17 @@ public class Dog extends Mammal{
     
     public static void main(String[] args) {
         // TODO code application logic here
-        Animal a=new Mammal();
-        Animal b=new Dog();
-        Dog d=new Dog();
-        System.out.println(a instanceof Animal);
+        Animal a=new Animal(); //Animal reference and object
+        Animal b=new Mammal();  //Animal reference but Mammal object.
+       // Dog d=new Dog();
+     /*   System.out.println(a instanceof Animal);
         System.out.println(b instanceof Mammal);
         System.out.println(d instanceof Animal);
+       */
+        a.blood();//runs the method in Animal class
+        b.blood(); //runs the method in Mammal class
         
+      
     }
     
 }

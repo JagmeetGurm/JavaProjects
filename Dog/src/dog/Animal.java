@@ -9,6 +9,10 @@ package dog;
  *
  * @author Jagmeet
  */
-interface Animal {
-    
+
+//Animal class
+class Animal {
+public void blood(){
+    System.out.println("Animals have blood");
+}    
 }
