@@ -13,6 +13,12 @@ public class Rect extends Shape{
     
     //applying polymorphism
     private double length, width;
+    
+    //constructor initializing the member variables
+    public Rect(double s1, double s2){
+        length=s1;
+        width=s2;
+    }
     //set method to set values of private variables
   public  void set(double side1, double side2){
         length=side1;
