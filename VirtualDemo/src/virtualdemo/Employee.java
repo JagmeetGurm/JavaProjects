@@ -9,7 +9,7 @@ package virtualdemo;
  *
  * @author Jagmeet
  */
-public class Employee {
+public abstract class Employee {
     private String name;
     private String address;
     private int number;
@@ -36,4 +36,8 @@ public class Employee {
     public int getNumber(){
         return number;
     }
+    public String toString(){
+        return name+" "+address+" "+number;
+    }
+    public abstract double computePay();
 }
