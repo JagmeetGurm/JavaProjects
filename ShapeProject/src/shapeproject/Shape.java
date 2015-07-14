@@ -9,6 +9,8 @@ package shapeproject;
  *
  * @author Jagmeet
  */
-public class Shape {
-    
+//the abstract shape class of the project
+public abstract class Shape {
+   public abstract boolean checkValidity();
+    public abstract double getArea();
 }
