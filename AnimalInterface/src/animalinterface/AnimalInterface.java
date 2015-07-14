@@ -9,13 +9,23 @@ package animalinterface;
  *
  * @author Jagmeet
  */
-public class AnimalInterface {
+public class AnimalInterface implements Animal{
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
-}
+   public void eat(){
+      System.out.println("Mammal eats");
+   }
+
+   public void travel(){
+      System.out.println("Mammal travels");
+   } 
+
+   public int noOfLegs(){
+      return 0;
+   }
+
+   public static void main(String args[]){
+      AnimalInterface m = new AnimalInterface();
+      m.eat();
+      m.travel();
+   }
+} 
