@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//import java.io.*;
+
 package shapeproject;
 import java.util.*;
+import java.io.*;
 
 /**
  *
@@ -16,7 +17,7 @@ public class ShapeProject {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         // TODO code application logic here
         
         Rect[] r=new Rect[9];
@@ -35,6 +36,7 @@ public class ShapeProject {
        //checked all the functions
      //Traingle
       Vector <Triangle>tri=new Vector();
+      Vector <Rect> rec=new Vector();
       Triangle t1=new Triangle(4, 6, 3);
       Triangle t2=new Triangle(3,2,9);
       System.out.println(t1.checkValidity());
@@ -48,6 +50,31 @@ public class ShapeProject {
     //System.out.println((Triangle)tri.firstElement().checkValidity()); 
       System.out.println("cheking 2nd triangle: "+tri.elementAt(1).checkValidity());
       
+      
+      
+      //fie reading
+      
+    Scanner s = new Scanner(new File("C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\ShapeProject\\src\\shapeproject\\inpRect.txt"));
+int [] tall = new int [100];
+int i = 0;
+while(s.hasNextInt()){
+ //  tall[i++] = s.nextInt();
+Rect r3=new Rect(s.nextInt(), s.nextInt());
+rec.add(r3);
+
+}
+
+    /*  }
+       catch (FileNotFoundException e) {   
+         // TODO Auto-generated catch block   
+         e.printStackTrace();   
+     }
+            */
+System.out.println("sixe of this vecgtor shd be 5, lets see: "+rec.size());
+      System.out.println("new check: "+rec.elementAt(0).getArea());
+      
+     
+
         
     }
     
