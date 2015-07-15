@@ -19,15 +19,15 @@ public class ShapeProject {
     public static void main(String[] args) {
         // TODO code application logic here
         
-       // Rect[] r=new Rect[5];
-        Rect r1=new Rect(4.0, 6.0);
-        System.out.println(r1.checkValidity());
-        System.out.println(r1.getArea());
+        Rect[] r=new Rect[9];
+         r[1]=new Rect(4.0, 6.0);
+        System.out.println(r[1].checkValidity());
+        System.out.println(r[1].getArea());
         System.out.println("change the length of rect r1: ");
-       r1.setSides(3.0, 6.0);
-      System.out.println("Side1: "+r1.getSide1());
-      System.out.println("Side2: "+r1.getSide2());
-      System.out.println("New Area of rect: "+r1.getArea());
+       r[1].setSides(3.0, 6.0);
+      System.out.println("Side1: "+r[1].getSide1());
+      System.out.println("Side2: "+r[1].getSide2());
+      System.out.println("New Area of rect: "+r[1].getArea());
       
        
         
