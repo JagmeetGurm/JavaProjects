@@ -20,7 +20,7 @@ public class Rect extends Shape{
         width=s2;
     }
     //set method to set values of private variables
-  public  void set(double side1, double side2){
+  public  void setSides(double side1, double side2){
         length=side1;
         width=side2;
         
