@@ -5,7 +5,7 @@
  */
 //import java.io.*;
 package shapeproject;
-//import shapeproject.Shape;
+import java.util.*;
 
 /**
  *
@@ -29,8 +29,20 @@ public class ShapeProject {
       System.out.println("Side2: "+r[1].getSide2());
       System.out.println("New Area of rect: "+r[1].getArea());
       
-       
-        
+       //checked all the functions
+     //Traingle
+      Vector tri=new Vector();
+      Triangle t1=new Triangle(4, 6, 3);
+      Triangle t2=new Triangle(3,2,9);
+      System.out.println(t1.checkValidity());
+      
+      
+     
+      tri.add(t1);
+      tri.add(t2);
+    //  System.out.println(tri(0).checkValidity);
+      
+      
         
     }
     
