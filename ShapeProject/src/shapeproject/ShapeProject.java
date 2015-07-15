@@ -60,20 +60,19 @@ int i = 0;
 while(s.hasNextInt()){
  //  tall[i++] = s.nextInt();
 Rect r3=new Rect(s.nextInt(), s.nextInt());
+if(r3.checkValidity())
 rec.add(r3);
 
 }
 
-    /*  }
-       catch (FileNotFoundException e) {   
-         // TODO Auto-generated catch block   
-         e.printStackTrace();   
-     }
-            */
-System.out.println("sixe of this vecgtor shd be 5, lets see: "+rec.size());
-      System.out.println("new check: "+rec.elementAt(0).getArea());
+System.out.println("Printing all areas of valid rectangle");
+//shouldn't include 5 now, should be only 4.
+//System.out.println("sixe of this vecgtor shd be 5, lets see: "+rec.size());
+for( int j=0; j<rec.size(); j++){
+      System.out.println("new check: area for "+(j+1));
+      System.out.println(": "+rec.elementAt(j).getArea());
       
-     
+} 
 
         
     }
