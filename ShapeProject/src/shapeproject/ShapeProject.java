@@ -41,6 +41,7 @@ public class ShapeProject {
       tri.add(t1);
       tri.add(t2);
     //  System.out.println(tri(0).checkValidity);
+      System.out.println(tri.firstElement());
       
       
         
