@@ -34,7 +34,7 @@ public class ShapeProject {
        }
        //checked all the functions
      //Traingle
-      Vector tri=new Vector();
+      Vector <Triangle>tri=new Vector();
       Triangle t1=new Triangle(4, 6, 3);
       Triangle t2=new Triangle(3,2,9);
       System.out.println(t1.checkValidity());
@@ -43,9 +43,10 @@ public class ShapeProject {
      
       tri.add(t1);
       tri.add(t2);
-      System.out.println(tri.elementAt(0));
-      System.out.println((Triangle)tri.firstElement());
-    //System.out.println((Triangle)tri.firstElement().checkValidity());  
+      System.out.println("This is the test for 1st element of triangle: "+tri.elementAt(0).checkValidity());
+      System.out.println(tri.firstElement().getArea());
+    //System.out.println((Triangle)tri.firstElement().checkValidity()); 
+      System.out.println("cheking 2nd triangle: "+tri.elementAt(1).checkValidity());
       
         
     }
