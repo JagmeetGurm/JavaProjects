@@ -42,7 +42,7 @@ public class ShapeProject {
       tri.add(t2);
       System.out.println(tri.elementAt(0));
       System.out.println((Triangle)tri.firstElement());
-      
+    //System.out.println((Triangle)tri.firstElement().checkValidity());  
       
         
     }
