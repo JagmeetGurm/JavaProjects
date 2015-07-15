@@ -21,14 +21,17 @@ public class ShapeProject {
         
         Rect[] r=new Rect[9];
          r[1]=new Rect(4.0, 6.0);
+         r[0]=new Rect(1,2);
         System.out.println(r[1].checkValidity());
         System.out.println(r[1].getArea());
         System.out.println("change the length of rect r1: ");
        r[1].setSides(3.0, 6.0);
-      System.out.println("Side1: "+r[1].getSide1());
-      System.out.println("Side2: "+r[1].getSide2());
-      System.out.println("New Area of rect: "+r[1].getArea());
-      
+       r[0].setSides(4, 5);
+       for(int i=0; i<2; i++){
+      System.out.println("Side1: "+r[i].getSide1());
+      System.out.println("Side2: "+r[i].getSide2());
+      System.out.println("New Area of rect: "+r[i].getArea());
+       }
        //checked all the functions
      //Traingle
       Vector tri=new Vector();
