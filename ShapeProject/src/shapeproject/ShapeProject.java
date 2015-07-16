@@ -65,12 +65,33 @@ rec.add(r3);
 
 }
 
+
+//triangle file being read
+Scanner s2 = new Scanner(new File("C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\ShapeProject\\src\\shapeproject\\inpTri.txt"));
+int [] tall2 = new int [100];
+int k = 0;
+while(s2.hasNextInt()){
+ //  tall[i++] = s.nextInt();
+Triangle t3=new Triangle(s2.nextInt(), s2.nextInt(), s2.nextInt());
+if(t3.checkValidity())
+tri.add(t3);
+
+}
 System.out.println("Printing all areas of valid rectangle");
 //shouldn't include 5 now, should be only 4.
 //System.out.println("sixe of this vecgtor shd be 5, lets see: "+rec.size());
 for( int j=0; j<rec.size(); j++){
       System.out.println("new check: area for "+(j+1));
       System.out.println(": "+rec.elementAt(j).getArea());
+      
+} 
+
+System.out.println("Printing all areas of valid triangle");
+//shouldn't include 5 now, should be only 4.
+//System.out.println("sixe of this vecgtor shd be 5, lets see: "+rec.size());
+for( int j=0; j<tri.size(); j++){
+      System.out.println("new check: area for "+(j+1));
+      System.out.println(": "+tri.elementAt(j).getArea());
       
 } 
 
