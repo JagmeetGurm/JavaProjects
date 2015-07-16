@@ -12,14 +12,16 @@ import java.io.*;
  *
  * @author Jagmeet
  */
+ 
 public class ShapeProject {
 
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) throws IOException{
         // TODO code application logic here
-        
+       
         Rect[] r=new Rect[9];
          r[1]=new Rect(4.0, 6.0);
          r[0]=new Rect(1,2);
@@ -44,11 +46,11 @@ public class ShapeProject {
       
      
       tri.add(t1);
-      tri.add(t2);
+     // tri.add(t2);
       System.out.println("This is the test for 1st element of triangle: "+tri.elementAt(0).checkValidity());
       System.out.println(tri.firstElement().getArea());
     //System.out.println((Triangle)tri.firstElement().checkValidity()); 
-      System.out.println("cheking 2nd triangle: "+tri.elementAt(1).checkValidity());
+    //  System.out.println("cheking 2nd triangle: "+tri.elementAt(1).checkValidity());
       
       
       
@@ -56,9 +58,9 @@ public class ShapeProject {
       
     Scanner s = new Scanner(new File("C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\ShapeProject\\src\\shapeproject\\inpRect.txt"));
 
-while(s.hasNextInt()){
+while(s.hasNextDouble()){
  //  tall[i++] = s.nextInt();
-Rect r3=new Rect(s.nextInt(), s.nextInt());
+Rect r3=new Rect(s.nextDouble(), s.nextDouble());
 if(r3.checkValidity())
 rec.add(r3);
 
@@ -68,32 +70,49 @@ rec.add(r3);
 //triangle file being read
 Scanner s2 = new Scanner(new File("C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\ShapeProject\\src\\shapeproject\\inpTri.txt"));
 
-while(s2.hasNextInt()){
+while(s2.hasNextDouble()){
  //  tall[i++] = s.nextInt();
-Triangle t3=new Triangle(s2.nextInt(), s2.nextInt(), s2.nextInt());
+Triangle t3=new Triangle(s2.nextDouble(), s2.nextDouble(), s2.nextDouble());
 if(t3.checkValidity())
 tri.add(t3);
 
 }
+
+
 System.out.println("Printing all areas of valid rectangle");
 //shouldn't include 5 now, should be only 4.
 //System.out.println("sixe of this vecgtor shd be 5, lets see: "+rec.size());
-for( int j=0; j<rec.size(); j++){
-      System.out.println("new check: area for "+(j+1));
-      System.out.println(": "+rec.elementAt(j).getArea());
-      
-} 
-
+ 
+saveRarea(rec.size(), rec);
 System.out.println("Printing all areas of valid triangle");
 //shouldn't include 5 now, should be only 4.
 //System.out.println("sixe of this vecgtor shd be 5, lets see: "+rec.size());
-for( int j=0; j<tri.size(); j++){
+
+
+    saveTarea(tri.size(), tri);    
+    }
+    public static void saveRarea(int size, Vector<Rect>b){
+      // double[]b2=b;
+    System.out.println("Printing all areas of valid rectangle after passing to global function: ");
+//shouldn't include 5 now, should be only 4.
+//System.out.println("sixe of this vecgtor shd be 5, lets see: "+rec.size());
+for( int j=0; j<size; j++){
       System.out.println("new check: area for "+(j+1));
-      System.out.println(": "+tri.elementAt(j).getArea());
+      System.out.println(b.elementAt(j).getArea());
       
 } 
+    } 
+    //global functions in Java defined with static keyword
+    public static void saveTarea(int size, Vector<Triangle>b){
+     //  double[]b3=b;
+    System.out.println("Printing all areas of valid triangle after passing to global function: ");
 
-        
+for( int j=0; j<size; j++){
+      System.out.println("new check: area for "+(j+1));
+      System.out.println(b.elementAt(j).getArea());
+      
+} 
     }
     
 }
+
