@@ -20,7 +20,7 @@ public class ShapeProject {
      */
     
     public static void main(String[] args) throws IOException{
-        // TODO code application logic here
+        
        
         Rect[] r=new Rect[9];
          r[1]=new Rect(4.0, 6.0);
@@ -96,6 +96,7 @@ System.out.println("Printing all areas of valid triangle");
     System.out.println("Printing all areas of valid rectangle after passing to global function: ");
 //shouldn't include 5 now, should be only 4.
 //System.out.println("sixe of this vecgtor shd be 5, lets see: "+rec.size());
+    //writing the output to a txt file
 PrintWriter fout1= new PrintWriter("C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\ShapeProject\\src\\shapeproject\\OutputRectFile.txt");    
 for( int j=0; j<size; j++){
    //   System.out.println("new check: area for "+(j+1));
@@ -109,6 +110,7 @@ fout1.close();
     public static void saveTarea(int size, Vector<Triangle>b) throws IOException{
      //  double[]b3=b;
     System.out.println("Printing all areas of valid triangle after passing to global function: ");
+    //writing output to txt file
 PrintWriter fout= new PrintWriter("C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\ShapeProject\\src\\shapeproject\\OutputTriangleFile.txt");
 for( int j=0; j<size; j++){
     //  System.out.println("new check: area for "+(j+1));
