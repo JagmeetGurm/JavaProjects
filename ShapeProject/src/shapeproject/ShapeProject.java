@@ -55,8 +55,7 @@ public class ShapeProject {
       //fie reading
       
     Scanner s = new Scanner(new File("C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\ShapeProject\\src\\shapeproject\\inpRect.txt"));
-int [] tall = new int [100];
-int i = 0;
+
 while(s.hasNextInt()){
  //  tall[i++] = s.nextInt();
 Rect r3=new Rect(s.nextInt(), s.nextInt());
@@ -68,8 +67,7 @@ rec.add(r3);
 
 //triangle file being read
 Scanner s2 = new Scanner(new File("C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\ShapeProject\\src\\shapeproject\\inpTri.txt"));
-int [] tall2 = new int [100];
-int k = 0;
+
 while(s2.hasNextInt()){
  //  tall[i++] = s.nextInt();
 Triangle t3=new Triangle(s2.nextInt(), s2.nextInt(), s2.nextInt());
