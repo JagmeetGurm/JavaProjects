@@ -103,15 +103,21 @@ for( int j=0; j<size; j++){
 } 
     } 
     //global functions in Java defined with static keyword
-    public static void saveTarea(int size, Vector<Triangle>b){
+    public static void saveTarea(int size, Vector<Triangle>b) throws IOException{
      //  double[]b3=b;
     System.out.println("Printing all areas of valid triangle after passing to global function: ");
-
+PrintWriter fout= new PrintWriter("C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\ShapeProject\\src\\shapeproject\\OutputFile.txt");
 for( int j=0; j<size; j++){
       System.out.println("new check: area for "+(j+1));
       System.out.println(b.elementAt(j).getArea());
-      
+      fout.printf("\n%f", b.elementAt(j).getArea() );
+fout.println();
 } 
+
+//....
+
+//....
+fout.close();
     }
     
 }
