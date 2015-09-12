@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package sumofdigits;
-
+//import java.util.*;
+import java.io.*;
 /**
  *
  * @author Jagmeet
@@ -22,6 +23,7 @@ public class SumOfDigits {
             sum+=(num%10);
             num=num/10;
         }
+        System.out.println(sum);
     }
     
 }
