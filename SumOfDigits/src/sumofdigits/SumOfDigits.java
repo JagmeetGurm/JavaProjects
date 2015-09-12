@@ -18,10 +18,10 @@ public class SumOfDigits {
         // TODO code application logic here
         int num=512;
         int sum=0;
-     //   while(num!=0){
-         //   sum+=(num%10);
+        while(num!=0){ 
+            sum+=(num%10);
             num=num/10;
-      //  }
+        }
     }
     
 }
