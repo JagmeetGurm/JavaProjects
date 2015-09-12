@@ -19,11 +19,11 @@ public class SumOfDigits {
         // TODO code application logic here
         int num=512;
         int sum=0;
-        while(num!=0){ 
-            sum+=(num%10);
-            num=num/10;
+        while(num!=0){ //running loop time num is not 0
+            sum+=(num%10); //with each loop taking mod of num
+            num=num/10;  //divide num by 10 for each loop
         }
-        System.out.println(sum);
+        System.out.println(sum);  //printing out the output
     }
     
 }
