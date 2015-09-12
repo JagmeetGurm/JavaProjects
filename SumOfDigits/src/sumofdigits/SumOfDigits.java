@@ -17,7 +17,7 @@ public class SumOfDigits {
     public static void main(String[] args) {
         // TODO code application logic here
         int num=512;
-     //   int sum=0;
+        int sum=0;
      //   while(num!=0){
          //   sum+=(num%10);
             num=num/10;
