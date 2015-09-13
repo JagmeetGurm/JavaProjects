@@ -35,12 +35,12 @@ public class SumOfDigits {
         }
         
     //program to calculate modulus of a number without using %
-        int n=14;
-        int m=3;
-        while(n>=m){
-            n-=m;
+        int n=14;  //initialized dividend
+        int m=3;  //initialized divisor
+        while(n>=m){   //repeated subtraction till divisor is >= to dividend
+            n-=m; //decremental subtraction
         }
-        System.out.println("Modulus program: ");
+        System.out.println("Modulus program: "); //printing output
         System.out.println(n);
         
     }
