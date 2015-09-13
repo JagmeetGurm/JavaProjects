@@ -27,11 +27,11 @@ public class SumOfDigits {
         
         
         //program to print odd numbers between 1 and 99
-        int i=1;
-        while(i<100)
+        int i=1; //initialized i
+        while(i<100) //while loop
         {
-            System.out.println(i);
-            i+=2;
+            System.out.println(i); //print i
+            i+=2; //incrementing by 2 
         }
     }
     
