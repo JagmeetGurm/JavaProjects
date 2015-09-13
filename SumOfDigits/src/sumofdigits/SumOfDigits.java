@@ -33,6 +33,10 @@ public class SumOfDigits {
             System.out.println(i); //print i
             i+=2; //incrementing by 2 
         }
+        
+    //program to calculate modulus of a number without using %
+        
+        
     }
     
 }
