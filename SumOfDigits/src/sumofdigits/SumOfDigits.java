@@ -35,6 +35,10 @@ public class SumOfDigits {
         }
         
     //program to calculate modulus of a number without using %
+        int n=20;
+        int m=3;
+        while
+        
         
         
     }
