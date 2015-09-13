@@ -24,6 +24,9 @@ public class SumOfDigits {
             num=num/10;  //divide num by 10 for each loop
         }
         System.out.println(sum);  //printing out the output
+        
+        
+        //program to print odd numbers between 1 and 99
     }
     
 }
