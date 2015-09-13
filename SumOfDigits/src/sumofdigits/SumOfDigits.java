@@ -35,11 +35,13 @@ public class SumOfDigits {
         }
         
     //program to calculate modulus of a number without using %
-        int n=20;
+        int n=14;
         int m=3;
-        while
-        
-        
+        while(n>=m){
+            n-=m;
+        }
+        System.out.println("Modulus program: ");
+        System.out.println(n);
         
     }
     
