@@ -16,6 +16,6 @@ public class gene {
     public gene(int start, int end){
         startIndex=start;
         endIndex=end;
-        count=0;
+        count=1;
     }
 }

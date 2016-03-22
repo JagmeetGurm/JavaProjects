@@ -6,6 +6,7 @@
 
 package readmapping;
 import java.io.*;
+import java.util.*;
 /**
  *
  * @author Jagmeet
@@ -15,6 +16,23 @@ public class ReadMapping {
     /**
      * @param args the command line arguments
      */
+    public static void mapping(String geneId, gene g, Map<String, gene>sample){
+        if(sample.isEmpty()){
+        sample.put(geneId, g);
+        }
+        else{
+        
+        if(sample.containsKey(geneId)){
+        gene temp=sample.get(geneId);
+        temp.count++;
+      //  break;
+        }
+        else{
+       sample.put(geneId, g);
+        }
+        }
+        
+    }
     public static void main(String[] args) {
         // TODO code application logic here
         //reading file
@@ -26,17 +44,32 @@ public class ReadMapping {
         //wrap fileReader in BufferedReader
         BufferedReader bufferedReader = 
                 new BufferedReader(fileReader);
-        
+        Map<String,gene>sample=new HashMap<String, gene>();
 while((line=bufferedReader.readLine())!=null){
   //  if(line.substring(17,25)=="NR_046018"){
     String[] columns = line.split("\t");
      // System.out.println("my first column : "+ columns[0] );
-      System.out.println("my second column : "+ columns[1] );
+   //   System.out.println("my second column : "+ columns[1] ); //col 1 is start index
       String[] thirdColumn= columns[2].split(" ");
-      System.out.println("third col: "+ thirdColumn[0]);
+    //  System.out.println("third col: "+ thirdColumn[0]); //end index
+      //thirdcol[1] will be 
    // System.out.println(line);
   //  }
+      int startInd=Integer.parseInt(columns[1]); //convert stirng to Int
+      int endInd=Integer.parseInt(thirdColumn[0]); //convert string to Int
+      gene g=new gene(startInd, endInd); //create gene object
+      String geneID=thirdColumn[1]; //gene id extracted
+      
+    //  sample.put(geneID, g);
+      mapping(geneID, g, sample);
         }
+for ( Map.Entry<String, gene> entry : sample.entrySet()) {
+    String key = entry.getKey();
+    gene tab = entry.getValue();
+    // do something with key and/or tab
+    System.out.println("key: "+ key + "   count: "+ tab.count);
+}
+
 bufferedReader.close();
         }
         catch(FileNotFoundException ex) {
