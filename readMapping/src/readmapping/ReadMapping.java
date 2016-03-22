@@ -18,7 +18,7 @@ public class ReadMapping {
     public static void main(String[] args) {
         // TODO code application logic here
         //reading file
-        String fileName="C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\readMapping\\src\\readmapping\\output_bowtie.fa";
+        String fileName="C:\\Users\\Jagmeet\\Documents\\NetBeansProjects\\readMapping\\src\\readmapping\\test.fa";
         String line=null;
         
         try{
@@ -28,9 +28,13 @@ public class ReadMapping {
                 new BufferedReader(fileReader);
         
 while((line=bufferedReader.readLine())!=null){
-    if(line.substring(17,25)=="NR_046018"){
-    System.out.println(line);
-    }
+  //  if(line.substring(17,25)=="NR_046018"){
+    String[] columns = line.split("\t");
+     // System.out.println("my first column : "+ columns[0] );
+      System.out.println("my second column : "+ columns[1] );
+      System.out.println("my third column : "+ columns[2] );
+   // System.out.println(line);
+  //  }
         }
 bufferedReader.close();
         }
