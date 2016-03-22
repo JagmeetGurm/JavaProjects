@@ -13,7 +13,9 @@ public class gene {
     public int startIndex;
     public int endIndex;
     public int count;
-    public gene(int start, int end, int c){
-        
+    public gene(int start, int end){
+        startIndex=start;
+        endIndex=end;
+        count=0;
     }
 }
