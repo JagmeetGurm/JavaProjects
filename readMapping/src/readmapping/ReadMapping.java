@@ -32,7 +32,8 @@ while((line=bufferedReader.readLine())!=null){
     String[] columns = line.split("\t");
      // System.out.println("my first column : "+ columns[0] );
       System.out.println("my second column : "+ columns[1] );
-      System.out.println("my third column : "+ columns[2] );
+      String[] thirdColumn= columns[2].split(" ");
+      System.out.println("third col: "+ thirdColumn[0]);
    // System.out.println(line);
   //  }
         }
