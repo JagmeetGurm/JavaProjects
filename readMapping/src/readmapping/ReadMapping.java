@@ -59,17 +59,20 @@ while((line=bufferedReader.readLine())!=null){
       int endInd=Integer.parseInt(thirdColumn[0]); //convert string to Int
       gene g=new gene(startInd, endInd); //create gene object
       String geneID=thirdColumn[1]; //gene id extracted
-      
+      int pos=geneID.indexOf('N');
+      String gID=geneID.substring(pos,pos+9 );
+      System.out.println(gID);
     //  sample.put(geneID, g);
       mapping(geneID, g, sample);
         }
+/*
 for ( Map.Entry<String, gene> entry : sample.entrySet()) {
     String key = entry.getKey();
     gene tab = entry.getValue();
     // do something with key and/or tab
     System.out.println("key: "+ key + "   count: "+ tab.count);
 }
-
+*/
 bufferedReader.close();
         }
         catch(FileNotFoundException ex) {
