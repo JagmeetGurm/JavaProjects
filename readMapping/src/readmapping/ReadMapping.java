@@ -16,18 +16,18 @@ public class ReadMapping {
     /**
      * @param args the command line arguments
      */
-    public static void mapping(String geneId, gene g, Map<String, gene>sample){
-        if(sample.isEmpty()){
+    public static void mapping(String geneId, gene g, Map<String, gene>sample, int rL, int rH){
+        if(sample.isEmpty() && (g.startIndex>=rL && g.endIndex<=rH) ){
         sample.put(geneId, g);
         }
         else{
         
-        if(sample.containsKey(geneId)){
+        if(sample.containsKey(geneId) && (g.startIndex>=rL && g.endIndex<=rH)){
         gene temp=sample.get(geneId);
         temp.count++;
       //  break;
         }
-        else{
+       else if(g.startIndex>=rL && g.endIndex<=rH){
        sample.put(geneId, g);
         }
         }
@@ -59,11 +59,15 @@ while((line=bufferedReader.readLine())!=null){
       int endInd=Integer.parseInt(thirdColumn[0]); //convert string to Int
       gene g=new gene(startInd, endInd); //create gene object
       String geneID=thirdColumn[1]; //gene id extracted
+      String range=geneID.substring(5);
       int pos=geneID.indexOf('N');
-      String gID=geneID.substring(pos,pos+9 );
-     // System.out.println(gID);
+      int rangeLow=Integer.parseInt(range.substring(0, range.indexOf('.'))); //lwer range
+      int rangeHigh= Integer.parseInt(range.substring((range.indexOf('.'))+1, pos-6));
+      int lastPos=geneID.lastIndexOf('.')-2;
+      String gID=geneID.substring(pos,lastPos );
+     // System.out.println(rangeHigh);
     //  sample.put(geneID, g);
-      mapping(gID, g, sample);
+      mapping(gID, g, sample, rangeLow, rangeHigh);
         }
 
 for ( Map.Entry<String, gene> entry : sample.entrySet()) {
