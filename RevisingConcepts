@@ -50,6 +50,9 @@ System.out.println(s.substring(1, 3)); //ag
     StringList.add("First");
     StringList.add("Second");
     System.out.println(StringList);
+    System.out.println(StringList.get(1)); //returns Second
+    //lets change second
+    System.out.println(StringList.set(1,"SecondChanged"));
     Iterator iter1=StringList.iterator();
     while(iter1.hasNext()){
         System.out.println(iter1.next());
