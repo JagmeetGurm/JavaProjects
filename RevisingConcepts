@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package revisingconcepts;
+import java.util.*;
+
 
 /**
  *
@@ -15,7 +17,7 @@ public class RevisingConcepts {
      * @param args the command line arguments
      */
     public static void reverse(char[] name){
-        int size=name.length;
+        Integer size=name.length;
          for(int i=0; i<size/2; i++){
             char temp=name[i]; //[i];
             name[i]=name[size-i-1];
@@ -35,8 +37,22 @@ public class RevisingConcepts {
         char[] nameArray=name.toCharArray();
         reverse(nameArray);
         
-       
-    
-   // System.out.println(nameArray);
+       name=new String(nameArray);
+    String s="jagmeet gurm";
+String sub=s.substring(3); //output: meet gurm
+String sub2=s.substring(3, 6); //meet
+String sub3=s.substring(s.indexOf('m'));//meet gurm
+char sub4=s.charAt(5);//e
+System.out.println(sub +"  "+sub2+ "  "+sub3+"  "+sub4);
+System.out.println(s.substring(1, 3)); //ag
+    System.out.println(name);
+    List<String>StringList=new ArrayList<String>();
+    StringList.add("First");
+    StringList.add("Second");
+    System.out.println(StringList);
+    Iterator iter1=StringList.iterator();
+    while(iter1.hasNext()){
+        System.out.println(iter1.next());
+    }
     }
 }
