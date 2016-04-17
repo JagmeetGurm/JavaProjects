@@ -17,7 +17,12 @@ public class RevisingConcepts {
      * @param args the command line arguments
      */
     public static void sort(char[] name){
-    for()
+        char temp=name[0];
+    for(int i=1; i<name.length; i++){
+        if(temp>name[i]){
+        temp=name[i];
+        }
+    }
     }
     public static void reverse(char[] name){
         Integer size=name.length;
