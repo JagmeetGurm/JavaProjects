@@ -18,11 +18,18 @@ public class RevisingConcepts {
      */
     public static void sort(char[] name){
         char temp=name[0];
-    for(int i=1; i<name.length; i++){
+        int k=0;
+        for(int j=0; j<name.length; j++){
+    for(int i=j; i<name.length; i++){
         if(temp>name[i]){
         temp=name[i];
+        k=i;
         }
     }
+    char t=name[j];
+     name[j]=temp; 
+         name[k]=t;}
+        System.out.println(name);
     }
     public static void reverse(char[] name){
         Integer size=name.length;
@@ -40,11 +47,12 @@ public class RevisingConcepts {
     public static void main(String[] args) {
         // TODO code application logic here
         String name="Jagmeet";
+        
         int size=name.length();
         //converted the string to char array
         char[] nameArray=name.toCharArray();
         reverse(nameArray);
-        
+        sort(nameArray);
        name=new String(nameArray);
     String s="jagmeet gurm";
 String sub=s.substring(3); //output: meet gurm
