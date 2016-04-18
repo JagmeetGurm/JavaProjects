@@ -20,8 +20,9 @@ public class RevisingConcepts {
         char temp=name[0];
         int k=0;
         for(int j=0; j<name.length; j++){
+            temp=name[j];
     for(int i=j; i<name.length; i++){
-        if(temp>name[i]){
+        if(temp>=name[i]){
         temp=name[i];
         k=i;
         }
@@ -43,10 +44,12 @@ public class RevisingConcepts {
         }
          System.out.println(name);
     }
+    
+    
     //function to reverse the string
     public static void main(String[] args) {
         // TODO code application logic here
-        String name="Jagmeet";
+        String name="jagmeet";
         
         int size=name.length();
         //converted the string to char array
